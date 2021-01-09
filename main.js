@@ -12,3 +12,5 @@ const email = utility.checkEmailId(Email)
 console.log("First Name is :", fName);
 console.log("Last Name is :", lName);
 console.log("Email_Id is :", email);
+
+
