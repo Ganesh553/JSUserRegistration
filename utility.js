@@ -10,6 +10,7 @@ class Utility{
             return name;
         }
     }
+  
     checkLastName(name){
         var regex = /^[A-Z]{1,}[a-z]{2,}/;
         if(regex.test(name)){
