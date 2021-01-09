@@ -21,7 +21,6 @@ class Utility{
             return name;
         }
     }
-
     checkEmailId(mail){
         var regex = /^([a-zA-Z0-9_\.\-])+@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
         if(regex.test(mail)){
@@ -31,6 +30,17 @@ class Utility{
         else{
             console.log("False :",mail);
             return mail;
+        }
+    }
+    checkPhoneNumber(number){
+        var regex = /^([0-9]{2})+ +([789]{1})+([0-9]{9})+$/;
+        if(regex.test(number)){
+            console.log("True :",number);
+            return number;
+        }
+        else{
+            console.log("False :",number);
+            return number;
         }
     }
 }
