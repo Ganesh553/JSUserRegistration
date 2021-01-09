@@ -43,5 +43,16 @@ class Utility{
             return number;
         }
     }
+    checkPassword(password){
+        var regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+        if(regex.test(password)){
+            console.log("True: ",password);
+            return password;
+        }
+        else{
+            console.log("False: ",password);
+            return password;
+        }
+    }
 }
 module.exports = new Utility();
