@@ -34,5 +34,27 @@ class Utility{
                 flag=true;
         }
     }
+    checkPhoneNumber(number){
+        var regex = /^([0-9]{2})+ +([789]{1})+([0-9]{9})+$/;
+        if(regex.test(number)){
+            console.log("True :",number);
+            return number;
+        }
+        else{
+            console.log("False :",number);
+            return number;
+        }
+    }
+    checkPassword(password){
+        var regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+        if(regex.test(password)){
+            console.log("True: ",password);
+            return password;
+        }
+        else{
+            console.log("False: ",password);
+            return password;
+        }
+    }
 }
 module.exports = new Utility();
