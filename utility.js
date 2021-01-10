@@ -23,6 +23,17 @@ class Utility{
                 flag=true;
         }
     }
+    checkLastName(){
+        var flag=true;
+        var regex = /^[A-Z]{1,}[a-z]{2,}/;
+        while(flag){
+            var LastName = readLine.question("Enter the Last Name: ")
+            if(regex.test(LastName))
+                return;
+            else
+                flag=true;
+        }
+    }
     checkEmailId(){
         var flag=true;
         var regex = /^([a-zA-Z0-9_\.\-])+@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
@@ -34,15 +45,15 @@ class Utility{
                 flag=true;
         }
     }
-    checkPhoneNumber(number){
+    checkPhoneNumber(){
+        var flag=true;
         var regex = /^([0-9]{2})+ +([789]{1})+([0-9]{9})+$/;
-        if(regex.test(number)){
-            console.log("True :",number);
-            return number;
-        }
-        else{
-            console.log("False :",number);
-            return number;
+        while(flag){
+            let number = readLine.question("Enter the PhoneNumber: ")
+            if(regex.test(number))
+                return;
+            else
+                flag=true;
         }
     }
     checkPassword(password){
