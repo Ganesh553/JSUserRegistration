@@ -1,13 +1,15 @@
+const readLine = require('readLine-sync')
+
 class Utility{
-    checkFirstName(name){
+    checkFirstName(){
+        var flag=true;
         var regex = /^[A-Z]{1,}[a-z]{2,}/;
-        if(regex.test(name)){
-            console.log("True :",name);
-            return name;
-        }
-        else{
-            console.log("False :",name);
-            return name;
+        while(flag){
+            var FirstName = readLine.question("Enter the First Name: ")
+            if(regex.test(FirstName))
+                return;
+            else
+                flag=true;
         }
     }
 }
