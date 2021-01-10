@@ -1,5 +1,4 @@
 const readLine = require('readLine-sync')
-
 class Utility{
     checkFirstName(){
         var flag=true;
@@ -56,15 +55,15 @@ class Utility{
                 flag=true;
         }
     }
-    checkPassword(password){
+    checkPassword(){
+        var flag=true;
         var regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
-        if(regex.test(password)){
-            console.log("True: ",password);
-            return password;
-        }
-        else{
-            console.log("False: ",password);
-            return password;
+        while(flag){
+            let password = readLine.question("Enter the Password: ")
+            if(regex.test(password))
+                return;
+            else
+                flag=true;
         }
     }
 }
