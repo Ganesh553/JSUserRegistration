@@ -22,6 +22,17 @@ class Utility{
                 flag=true;
         }
     }
+    checkLastName(){
+        var flag=true;
+        var regex = /^[A-Z]{1,}[a-z]{2,}/;
+        while(flag){
+            var LastName = readLine.question("Enter the Last Name: ")
+            if(regex.test(LastName))
+                return;
+            else
+                flag=true;
+        }
+    }
     checkEmailId(){
         var flag=true;
         var regex = /^([a-zA-Z0-9_\.\-])+@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
