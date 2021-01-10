@@ -1,46 +1,47 @@
+const readLine = require('readLine-sync')
 class Utility{
-    checkFirstName(name){
+    checkFirstName(){
+        var flag=true;
         var regex = /^[A-Z]{1,}[a-z]{2,}/;
-        if(regex.test(name)){
-            console.log("True :",name);
-            return name;
-        }
-        else{
-            console.log("False :",name);
-            return name;
+        while(flag){
+            var FirstName = readLine.question("Enter the First Name: ")
+            if(regex.test(FirstName))
+                return;
+            else
+                flag=true;
         }
     }
-    checkLastName(name){
+    checkLastName(){
+        var flag=true;
         var regex = /^[A-Z]{1,}[a-z]{2,}/;
-        if(regex.test(name)){
-            console.log("True :",name);
-            return name;
-        }
-        else{
-            console.log("False :",name);
-            return name;
+        while(flag){
+            var LastName = readLine.question("Enter the Last Name: ")
+            if(regex.test(LastName))
+                return;
+            else
+                flag=true;
         }
     }
-    checkEmailId(mail){
+    checkEmailId(){
+        var flag=true;
         var regex = /^([a-zA-Z0-9_\.\-])+@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-        if(regex.test(mail)){
-            console.log("True :",mail);
-            return mail;
-        }
-        else{
-            console.log("False :",mail);
-            return mail;
+        while(flag){
+            let Email = readLine.question("Enter the Email_Id: ")
+            if(regex.test(Email))
+                return;
+            else
+                flag=true;
         }
     }
-    checkPhoneNumber(number){
+    checkPhoneNumber(){
+        var flag=true;
         var regex = /^([0-9]{2})+ +([789]{1})+([0-9]{9})+$/;
-        if(regex.test(number)){
-            console.log("True :",number);
-            return number;
-        }
-        else{
-            console.log("False :",number);
-            return number;
+        while(flag){
+            let number = readLine.question("Enter the PhoneNumber: ")
+            if(regex.test(number))
+                return;
+            else
+                flag=true;
         }
     }
 }
