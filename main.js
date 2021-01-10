@@ -4,5 +4,5 @@ utility.checkFirstName();
 utility.checkLastName();
 utility.checkEmailId()
 utility.checkPhoneNumber()
-utility.checkPassword()
+
 
